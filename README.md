@@ -1,4 +1,4 @@
-Heroku Twitter Stream: Perl
+Heroku Twitter Stream: Perl-Worker
 ======================
 
 This is a Heroku Twitter Stream in Perl.
@@ -28,7 +28,7 @@ Example usage:
     requires 'AnyEvent::Twitter::Stream','0';
     
     $ cat Procfile
-    bot: perl -Mlib=/app/local/lib/perl5 /app/stream.pl
+    worker: perl -Mlib=/app/local/lib/perl5 /app/stream.pl
     
     $ heroku create --stack cedar --buildpack https://github.com/macminiosx/heroku-twitterstream-perl.git
 
@@ -41,7 +41,7 @@ Example usage:
     
     $ heroku config:add MY_CONSUMER_KEY=... MY_CONSUMER_SECRET=... MY_OAUTH_TOKEN=... MY_OAUTH_TOKEN_SECRET=...
 
-    $ heroku scale bot=1
+    $ heroku scale worker=1
 
     $ heroku ps
 
