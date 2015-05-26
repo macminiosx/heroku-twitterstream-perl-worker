@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# this pack is valid for apps with an app.psgi in the root
+if [ -f $1/stream.pl ]; then
+  echo "Twitter/Stream in perl"
+  exit 0
+else
+  exit 1
+fi

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cat <<EOF
+---
+config_vars:
+  PATH: local/bin:/usr/local/bin:/usr/bin:/bin
+default_process_types:
+  worker: perl -Mlib=\$PWD/local/lib/perl5 /app/stream.pl
+EOF
