@@ -17,7 +17,7 @@ if [ -d $CACHE_DIR/local ]; then
   cp -a $CACHE_DIR/local $BUILD_DIR/local
 fi
 
-if [ -f $$BUILD_DIR/rebuild.txt ]; then
+if [ -f $BUILD_DIR/rebuild.txt ]; then
   rm $BUILD_DIR/local/bin/cpanm
   rm -fr $BUILD_DIR/local/lib/perl5
 fi
